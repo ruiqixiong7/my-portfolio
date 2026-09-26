@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <button type="button" id="fullscreen-button" aria-label="切换全屏">进入全屏</button>
+    <main>
+    </main>
+    <script src="chapter.js"></script>
+    <script src="sketch.js"></script>
+    <script>
+      const fullButton = document.getElementById('fullscreen-button');
+      fullButton.addEventListener('click', async () => {
+        try {
+          if (document.fullscreenElement) await document.exitFullscreen();
+          else await document.documentElement.requestFullscreen();
+        } catch (error) { fullButton.textContent = '浏览器不支持全屏'; }
+      });
+      document.addEventListener('fullscreenchange', () => {
+        fullButton.textContent = document.fullscreenElement ? '退出全屏' : '进入全屏';
+      });
+    </script>
+  </body>
+</html>

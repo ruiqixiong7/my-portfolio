@@ -1,0 +1,8 @@
+@font-face{font-family:GamePixel;src:url('AaHuanMengKongJianXiangSuTi.ttf') format('truetype');font-display:swap}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0917;color:#f9eafa}
+body{display:grid;place-items:center}
+main{width:100vw;height:100dvh;display:grid;place-items:center;overflow:hidden}
+canvas{display:block;width:min(100vw,177.77778dvh)!important;height:auto!important;max-height:100dvh;touch-action:manipulation}
+#fullscreen-button{position:fixed;top:14px;right:14px;z-index:10;border:1px solid #e6a5d2;border-radius:7px;background:#191427e8;color:#fff;padding:9px 14px;font:16px GamePixel,Arial,sans-serif;cursor:pointer}
+#fullscreen-button:hover{background:#573457}
+*{box-sizing:border-box}
